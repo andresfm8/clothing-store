@@ -1,6 +1,7 @@
 /* Used as starting data for ShopPage */
 
-const SHOP_DATA = [
+const SHOP_DATA = {
+  hats:
   {
     id: 1,
     title: 'Hats',
@@ -71,6 +72,7 @@ const SHOP_DATA = [
       }
     ]
   },
+  sneakers:
   {
     id: 2,
     title: 'Sneakers',
@@ -134,6 +136,7 @@ const SHOP_DATA = [
       }
     ]
   },
+  jackets:
   {
     id: 3,
     title: 'Jackets',
@@ -176,6 +179,7 @@ const SHOP_DATA = [
       }
     ]
   },
+  womens:
   {
     id: 4,
     title: 'Womens',
@@ -232,6 +236,7 @@ const SHOP_DATA = [
       }
     ]
   },
+  mens:
   {
     id: 5,
     title: 'Mens',
@@ -281,6 +286,6 @@ const SHOP_DATA = [
       }
     ]
   }
-];
+};
 
 export default SHOP_DATA;
