@@ -8,10 +8,9 @@ import {
   MenuItemContainer
 } from './menu-item.styles';
 
-const MenuItem = ({ title, imageUrl, size, history, linkUrl, match }) => {
-  console.log("HI THERE: " + imageUrl)
+const MenuItem = ({ title, imageUrl, size, history, linkUrl, match }) => (
   
-  return (<MenuItemContainer 
+  <MenuItemContainer 
     size={size}
     onClick={() => history.push(`${match.url}${linkUrl}`)}
   >
@@ -23,7 +22,7 @@ const MenuItem = ({ title, imageUrl, size, history, linkUrl, match }) => {
       <ContentTitle>{ title.toUpperCase() }</ContentTitle>
       <ContentSubtitle>SHOP NOW</ContentSubtitle>
     </ContentContainer>
-  </MenuItemContainer>)
-};
+  </MenuItemContainer>
+)
 
 export default withRouter(MenuItem);
