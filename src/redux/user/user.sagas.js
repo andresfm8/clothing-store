@@ -39,7 +39,7 @@ export function* signInWithGoogle() {
   }
 }
 
-export function* signInWithEmail({ payload: {email, password}}) {
+export function* signInWithEmail({ payload: {email, password} }) {
   try {
     const { user } = yield auth.signInWithEmailAndPassword(email, password);
     yield getSnapshotFromUserAuth(user);
@@ -50,7 +50,7 @@ export function* signInWithEmail({ payload: {email, password}}) {
 
 export function* isUserAuthenticated() {
   try {
-    const userAuth = yield getCurrentUser;
+    const userAuth = yield getCurrentUser();
     if(!userAuth) return;
     yield getSnapshotFromUserAuth(userAuth)
   } catch (error) {
